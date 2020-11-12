@@ -3,7 +3,8 @@
     display: block;
     position: relative;
     margin-top: -125px;
-    border-radius: 10px;    
+    border-radius: 10px;  
+    border: 1px solid black;  
 }
 
 .name {

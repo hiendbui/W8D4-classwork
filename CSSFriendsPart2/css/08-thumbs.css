@@ -1,8 +1,52 @@
 /* PHASE 2: Thumbs */
 
 .thumbs li {
-    display: flexbox;
+    display: inline-block;
+    position: relative;
     max-width: 30%;
     max-height: 30%;
     flex-flow: row;
+    border: 1px solid black; 
+    border-radius: 5px;
+    margin: 1px;
+}
+
+.thumbs li:hover {
+    cursor: pointer;
+}
+
+.thumb:after {
+  content: attr(title);
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 65px;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.thumb:before {
+  content: "";
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -7px;
+  border-top: 5px solid #000;
+  border-bottom: 0;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+.thumb:hover:before,
+.thumb:hover:after {
+  display: block;
+}
+
+.thumb > img {
+  border-radius: 5px;
 }
